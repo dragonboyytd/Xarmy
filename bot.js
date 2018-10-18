@@ -542,10 +542,12 @@ client.on('message', message => {
 		})
 	}
 });
-  
+
+
 client.on('message', msg => {
     if(msg.author.bot) return;
     
+	
     if(msg.content === '/sr') {
       client.guilds.forEach(g => {
         
@@ -599,7 +601,8 @@ client.on('message', message => {
        if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
         if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
               message.channel.send(`**${proposed} 
- بدك تقبلي عرض الزواج من ${message.author}
+
+بدك تقبلي عرض الزواج من ${message.author}
  العرض لمدة 10 ثانية 
  اكتب موافقة او لا**`)
 
